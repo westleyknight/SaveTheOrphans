@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="container">
+
+            <h1>SaveTheOrphans!</h1>
+            
+            <h2>Introduction</h2>
+
+            <p>The plugin is currently applied to all <code>p</code> tags, so none of the paragraphs on this page will have a single, orphaned word at the end of the paragraph.</p>
+            <p>By all means, grab the edge of your browser and resize it to test it out. I've dropped a paragraph of lorem ipsum text below just for that very reason.</p>
+
+            <h2>SaveTheOrphans in action!</h2>
+            
+            <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam obcaecati eligendi excepturi tempore doloribus reiciendis in itaque inventore debitis dolor quibusdam ipsa iusto libero magni odio reprehenderit optio quia voluptas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati facilis iure. Soluta culpa dolores harum id nihil dolore possimus mollitia alias molestias dignissimos sit cumque nulla nostrum corporis doloremque similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            
+            <h2>How to use</h2>
+            
+            <p>As with all other jQeury plugins you'll need to download the <code>savetheorphans.js</code> file and link it up like we have to this file:</p>
+            
+            <pre>&lt;script src="js/savetheorphans.js"&gt;&lt;/script&gt;</pre>
+
+            <p>You'll then need to add this into your jQuery:</p>
+            
+            <pre>$(document).ready(function(){
+    $("p").savetheorphans({
+        orphansToSave: 1
+    });
+});</pre>
+    
+            <h2>Examples</h2>
+            
+            <h3>Chaining selectors</h3>
+            
+            <p>You can chain the selectors, so it can work with more than just paragraphs. This will work on <code>p</code>, <code>li</code> and <code>blockquote</code>:</p>
+            
+            <pre>$("p,li,blockquote").savetheorphans({
+    orphansToSave: 1
+});</pre>
+
+            <h3>Save more orphans!</h3>
+            
+            <p>You can increase the number of orphans to save! For example, upping the orphansToSave variable to 3 will make sure that 4 words are shown on the last line of a paragraph. The following code will always show 3 words on the last line of a paragraph:</p>
+            
+            <pre>$("p").savetheorphans({
+    orphansToSave: 2
+});</pre>
+
+            <h2>That's all folks</h2>
+            
+            <p>So there we have it. A tiny little plugin to prevent orphaned text on your website.</p>
+            
+            <p>Enjoy!</p>
+        
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/savetheorphans.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
